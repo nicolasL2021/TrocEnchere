@@ -1,0 +1,21 @@
+{
+    "name": "utilisateur/troc-enchere",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nicolas LEFORT",
+            "email": "salocintrofel@gmail.com"
+        }
+    ],
+    "require": {
+        "altorouter/altorouter": "^1.2.0",
+        "symfony/var-dumper": "^6.0",
+        "filp/whoops": "^2.14",
+        "fakerphp/faker": "^1.19",
+        "vlucas/valitron": "1.4.5"
+    }
+}
