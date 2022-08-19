@@ -36,6 +36,7 @@ $router
     //LOGIN
     ->match('/login', 'auth/login', 'login')
     ->post('/logout', 'auth/logout', 'logout')
+    ->match('/signUp', 'auth/signUp', 'signUp')
     // ADMIN
     // gestion des articles
     ->get('/admin', 'admin/article/index', 'admin_articles')

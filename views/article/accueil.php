@@ -9,7 +9,7 @@ use App\Table\UserTable;
 
 $title = 'troc-Enchère';
 $pdo = Connection::getPDO();
-$query = $pdo->query('SELECT * FROM categories ORDER BY libelle ASC;');
+$query = $pdo->query('SELECT * FROM categories ORDER BY no_categorie ASC;');
 $categories = $query->fetchAll(PDO::FETCH_CLASS, Categorie::class);
 $lastArticle = (new ArticleTable($pdo))->last();
 $categorie = (new CategoryTable($pdo))->find($lastArticle->getNo_categorie());
@@ -22,7 +22,8 @@ $utilisateur = (new UserTable($pdo))->find($lastArticle->getNo_utilisateur());
     <section class="py-5 mt-5">
         <div class="px-4 px-lg-5 my-5">
             <div class="row gx-4 gx-lg-5 align-items-center">
-                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="" alt="..." /></div>
+                <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="../../img/imgDefault.jpg" alt="..." />
+                </div>
                 <div class="col-md-6">
                     <h1 class="display-5 fw-bolder"><?= $lastArticle->getNom_article() ?></h1>
                     <h5>Catégorie : <?= $categorie->getLibelle()?></h5>
@@ -48,11 +49,17 @@ $utilisateur = (new UserTable($pdo))->find($lastArticle->getNo_utilisateur());
     <?php foreach ($categories as $category) :?>
     <div class="col-md-3">
         <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">
-                    <i class="<?= $category->getFontawesome()?>"></i>
-                    <a
-                        href="<?= $router->url('category', ['id' => $category->getNo_categorie()])?>"><?= htmlentities($category->getLibelle()) ?></a>
+            <div class="card-body my-2"
+                style="background-image: url(../img/imgCategory/<?= $category->getNo_categorie() ?>.jpg);">
+                <h5 class="card-title text-center">
+
+                    <a href="<?= $router->url('category', ['id' => $category->getNo_categorie()])?>"><i
+                            class="<?= $category->getFontawesome()?>"></i><br><span
+                            class="text"><?= htmlentities($category->getLibelle()) ?></span>
+                        <span class="line -right"></span>
+                        <span class="line -top"></span>
+                        <span class="line -left"></span>
+                        <span class="line -bottom"></span></a>
                 </h5>
             </div>
         </div>

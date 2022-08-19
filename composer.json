@@ -7,15 +7,14 @@
     },
     "authors": [
         {
-            "name": "Nicolas LEFORT",
-            "email": "salocintrofel@gmail.com"
+            "name": "nicolasL2021",
+            "email": "85102335+nicolasL2021@users.noreply.github.com"
         }
     ],
     "require": {
-        "altorouter/altorouter": "^1.2.0",
-        "symfony/var-dumper": "^6.0",
         "filp/whoops": "^2.14",
-        "fakerphp/faker": "^1.19",
-        "vlucas/valitron": "1.4.5"
+        "altorouter/altorouter": "^2.0",
+        "vlucas/valitron": "^1.4",
+        "scssphp/scssphp": "^1.10"
     }
 }
