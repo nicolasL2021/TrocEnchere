@@ -34,6 +34,7 @@ $utilisateur = (new UserTable($pdo))->find($lastArticle->getNo_utilisateur());
                     <p>Début des enchères : <?= $lastArticle->getDate_debut_encheres()->format("d/m/Y") ?></p>
                     <p>Fin des enchères : <?= $lastArticle->getDate_fin_encheres()->format("d/m/Y") ?></p>
                     <p>Vendu par : <?= $utilisateur->getNom() ?> <?= $utilisateur->getPrenom() ?></p>
+                    <div class="timer" id="timer"></div>
                     <div class="d-flex">
                         <button class="btn btn-outline-dark flex-shrink-0" type="button">
                             <i class="bi-cart-fill me-1"></i>
