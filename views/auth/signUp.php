@@ -36,7 +36,7 @@ if(!empty($_POST)){
 $form = new Form($user, $errors);
 ?>
 <div class="pt-5">
-    <h1 class="pt-5">Se connecter</h1>
+    <h1 class="pt-5">S'inscrire</h1>
     <?php if(isset($_GET['forbidden'])): ?>
     <div class="alert alert-danger">
         Vous ne pouvez pas accéder à cette page !
@@ -53,6 +53,6 @@ $form = new Form($user, $errors);
         <?= $form->input('pseudo', 'Nom d\'utilisateur', 'text')?>
         <?= $form->input('password', 'Mot de passe', 'password')?>
         <?= $form->input('password', 'Confirmez votre mot de passe', 'password')?>
-        <button type="submit" class="my-5 btn btn-primary">Se connecter</button>
+        <button type="submit" class="my-5 btn btn-primary">S'inscrire'</button>
     </form>
 </div>

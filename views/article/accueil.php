@@ -47,15 +47,14 @@ $utilisateur = (new UserTable($pdo))->find($lastArticle->getNo_utilisateur());
 </div>
 <div class="row py-5">
     <?php foreach ($categories as $category) :?>
-    <div class="col-md-3">
-        <div class="card">
-            <div class="card-body my-2"
-                style="background-image: url(../img/imgCategory/<?= $category->getNo_categorie() ?>.jpg);">
+    <div class="col-md-3 py-2">
+        <div class="card img-fluid">
+            <img class="card-img-top" src="../img/imgCategory/<?= $category->getNo_categorie() ?>.jpg">
+            <div class="card-img-overlay my-2">
                 <h5 class="card-title text-center">
-
                     <a href="<?= $router->url('category', ['id' => $category->getNo_categorie()])?>"><i
                             class="<?= $category->getFontawesome()?>"></i><br><span
-                            class="text"><?= htmlentities($category->getLibelle()) ?></span>
+                            class="card-title"><?= htmlentities($category->getLibelle()) ?></span>
                         <span class="line -right"></span>
                         <span class="line -top"></span>
                         <span class="line -left"></span>

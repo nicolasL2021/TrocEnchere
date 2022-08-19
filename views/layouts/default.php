@@ -40,8 +40,8 @@
     </script>
     <script src="https://kit.fontawesome.com/906f0fffa0.js" crossorigin="anonymous"></script>
     <!-- Core theme JS-->
-    <script src="../../js/modal.js"></script>
     <script src="../../js/nav.js"></script>
+    <script src="../../js/modal.js"></script>
     <script src="../../js/script.js"></script>
 </body>
 

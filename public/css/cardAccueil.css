@@ -1,0 +1,8 @@
+.img-fluid{
+    width: 30vw;
+    height: 15vh;
+    object-fit: fill;
+}
+.card-img-top{
+    width:100%;
+}
