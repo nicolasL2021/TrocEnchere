@@ -14,6 +14,9 @@ $categories = $query->fetchAll(PDO::FETCH_CLASS, Categorie::class);
 $lastArticle = (new ArticleTable($pdo))->last();
 $categorie = (new CategoryTable($pdo))->find($lastArticle->getNo_categorie());
 $utilisateur = (new UserTable($pdo))->find($lastArticle->getNo_utilisateur());
+// $dateDeb = $lastArticle->getDate_debut_encheres();
+// $dateFin = $lastArticle->getDate_fin_encheres()->getTimestamp();
+// dd($dateFin);
 // dd($utilisateur);
 
 
@@ -31,8 +34,11 @@ $utilisateur = (new UserTable($pdo))->find($lastArticle->getNo_utilisateur());
                         <span>Prix actuel : <?= $lastArticle->getPrix_vente()?> €</span>
                     </div>
                     <p class="lead"><?= $lastArticle->getDescription()?></p>
-                    <p>Début des enchères : <?= $lastArticle->getDate_debut_encheres()->format("d/m/Y") ?></p>
-                    <p>Fin des enchères : <?= $lastArticle->getDate_fin_encheres()->format("d/m/Y") ?></p>
+                    <p class="date_debut">Début des enchères :
+                        <?= $lastArticle->getDate_debut_encheres()->format("d/m/Y") ?></p>
+                    <p>Fin des enchères :
+                        <span class="date_fin"><?= $lastArticle->getDate_fin_encheres()->format("d/m/Y") ?></span>
+                    </p>
                     <p>Vendu par : <?= $utilisateur->getNom() ?> <?= $utilisateur->getPrenom() ?></p>
                     <div class="timer" id="timer"></div>
                     <div class="d-flex">

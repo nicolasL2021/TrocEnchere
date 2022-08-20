@@ -15,6 +15,7 @@
         "filp/whoops": "^2.14",
         "altorouter/altorouter": "^2.0",
         "vlucas/valitron": "^1.4",
-        "scssphp/scssphp": "^1.10"
+        "scssphp/scssphp": "^1.10",
+        "symfony/var-dumper": "^6.0"
     }
 }
