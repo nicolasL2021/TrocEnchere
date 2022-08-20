@@ -1,5 +1,4 @@
-fetch("http://127.0.0.1/phpmyadmin/index.php?route=/database/structure&db=encheres")
-    .then(res => console.log(res))
+
 // timer
 function updateTimer() {
     let future = Date.parse("jul 20, 2024 12:00:00");
