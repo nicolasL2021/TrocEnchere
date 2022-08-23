@@ -1,4 +1,3 @@
-
 // timer
 function updateTimer() {
     let future = Date.parse("jul 20, 2024 12:00:00");
